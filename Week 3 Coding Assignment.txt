@@ -1,0 +1,118 @@
+const ages = [3 , 9 , 23 , 64 , 2 , 8 , 28 , 93]; //array with ages as numerical value
+
+ages[ages.length - 1] - ages[0]; //the way to programmatically subtract the first and last elements of the array
+
+ages.push(96); //adds new value to array Ages
+
+console.log(ages[ages.length - 1] - ages[0])
+//
+function getAvg(ages) {
+    const total = ages.reduce((acc, c) => acc + c, 0); //funtion used to average ages
+    return total / ages.length;
+}
+const average = getAvg(ages);
+console.log(average); //returns the average age
+//
+let names = ['sam', 'tommy', 'tim', 'sally', 'buck', 'bob'] // new array
+let namesLength = 0 //set initial value to 0
+
+for(let i = 0; i < names.length; i++){ //loop used to determine the length of the names as a numerical value
+     
+    namesLength = namesLength + names[i].length} //function used to determine namesLength as the numerical amount of letters in each name in the loop
+    
+    console.log(namesLength / names.length) //averages the numerical value
+
+    //accessing the first and last elements in an array
+    //First = index[0]   Last = using the length property which has one more value than the highest array index
+
+let names2 = ['conner', 'chaiton', 'raymond', 'deedee']
+let nameLengths = 0
+
+for(let i = 0; i < names2.length; i++){
+
+    nameLenghts = nameLengths + names2[i].length}
+
+    console.log(nameLengths + names2.length);
+//
+function repeatWord(_hello, repeats){ //creates empty string
+    let repeatWord = ''; 
+    while (repeats > 0){ //as long as repeats is greater than 0, the function will execute X times
+        repeatWord += 'hello';
+        repeats--;
+    }
+    return repeatWord; //returns repeated string
+}
+console.log(repeatWord('hello', 3));
+//
+let Person = { //variable to identify who the name belongs to
+    firstName: 'Conner',
+    lastName: 'Williams',
+    fullName: function (){
+        this.fullName = this.firstName  //function to combine the two names. ' ' places a space between the names
+        + ' ' + this.lastName;
+    }
+};
+Person.fullName(); //instructs the function to return the full first and last name
+console.log(Person.fullName);
+//
+function numbersSum(){
+    let numbers = [50, 25, 17, 10];
+    let sum = numbers.reduce(function(a, b) {return a + b}, 0); //checks the sum of values in the array
+    if (sum > 100){
+        return true; //checks if the sum of all value is greater than 100
+    }
+} 
+if (numbersSum() === true){     //prints true or false based on the sum of numbers in the array
+    console.log('true')
+}else{
+    console.log('false');
+}
+console.log()
+//
+function numbers2Avg(){
+    let numbers2 = [10, 20, 30, 40];
+    let total2 = numbers2.reduce((acc, c) => acc + c, 0);   //same as earlier problem. Finds the total of the values in the array numbers2
+    return total2 / numbers2.length     //averages the total amount
+}
+let average2 = numbers2Avg(); //allows console.log to print a value insted of the function itself
+console.log(average2);
+//
+let numbers3 = [1, 2, 3, 4];
+let numbers4 = [2, 4, 6, 8];
+function numbers3Avg(){
+let total3 = numbers3.reduce((acc, c) => acc + c, 0);
+return total3 / numbers3.length
+}
+let average3 = numbers3Avg();
+
+function numbers4Avg(){
+let total4 = numbers4.reduce((acc, c) => acc + c, 0);
+return total4 / numbers4.length
+}
+let average4 = numbers4Avg();
+
+if(average3 > average4){
+    return true;
+}
+//
+function willBuyDrink(){
+    let isHotOutside = true //sets isHotOutside as a boolean true/false statement
+    let moneyInPocket = [10]
+if (isHotOutside = true, moneyInPocket > 10.50){
+    return true; //returns true if value is above 10.50
+} 
+}
+if(willBuyDrink === true){
+    console.log("true")
+    }else{
+    console.log("false")
+    }
+console.log()
+//
+function Broly(){ //function = Legendary Super Saiyan Broly
+    let powerLevel = 9001; //sets Broly's Power Level
+    let power = "Maximum"; //his power is Maximum
+    if (powerLevel > 9000){ //checks if his power level is over 9000
+   return "My power is " + power} //shows his power is maximum
+}
+console.log(Broly())
